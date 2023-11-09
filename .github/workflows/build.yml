@@ -8,12 +8,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: List files in the repository
       - run: |
           ls ${{ github.workspace }}
       - uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
+          distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - run: |
-            java -version
+          java -version
