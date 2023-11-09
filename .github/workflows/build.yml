@@ -9,11 +9,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: List files in the repository
-        run: |
+      - run: |
           ls ${{ github.workspace }}
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-        run: |
+      - run: |
             java -version
